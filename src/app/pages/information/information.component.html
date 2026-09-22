@@ -1,0 +1,63 @@
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="tag">
+        {{ translations[currentLanguage].information.tag }}
+      </span>
+
+      <h1>
+        {{ translations[currentLanguage].information.title }}
+      </h1>
+
+      <p>
+        {{ translations[currentLanguage].information.description }}
+      </p>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="container">
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-icon">📦</div>
+
+          <h2>
+            {{ translations[currentLanguage].information.containersTitle }}
+          </h2>
+
+          <p>
+            {{ translations[currentLanguage].information.containersText }}
+          </p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-icon">🪵</div>
+
+          <h2>
+            {{ translations[currentLanguage].information.palletsTitle }}
+          </h2>
+
+          <p>
+            {{ translations[currentLanguage].information.palletsText }}
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-cta">
+    <div class="container">
+      <h2>
+        {{ translations[currentLanguage].information.contactTitle }}
+      </h2>
+
+      <p>
+        {{ translations[currentLanguage].information.contactText }}
+      </p>
+
+      <a routerLink="/contact" class="btn">
+        {{ translations[currentLanguage].information.contactButton }}
+      </a>
+    </div>
+  </section>
+</main>

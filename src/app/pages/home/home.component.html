@@ -1,0 +1,308 @@
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <span class="hero-tag">
+        {{ translations[currentLanguage].home.tag }}
+      </span>
+
+      <h1>
+        {{ translations[currentLanguage].home.title }}
+      </h1>
+
+      <p>
+        {{ translations[currentLanguage].home.description }}
+      </p>
+
+      <div class="hero-buttons">
+        <a routerLink="/quote" class="btn btn-primary">
+          {{ currentLanguage === 'en' ? 'Request a Quote' : 'Solicitar Presupuesto' }}
+        </a>
+
+        <a routerLink="/information" class="btn btn-outline">
+          {{ currentLanguage === 'en' ? 'Explore Our Solutions' : 'Descubra Nuestras Soluciones' }}
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>
+        {{ currentLanguage === 'en' ? 'Discover more' : 'Descubra más' }}
+      </span>
+
+      <span class="scroll-arrow">↓</span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          {{ translations[currentLanguage].home.whatWeDo }}
+        </span>
+
+        <h2>
+          {{ translations[currentLanguage].home.servicesTitle }}
+        </h2>
+
+        <p>
+          {{
+            currentLanguage === 'en'
+              ? 'Practical solutions designed to support your storage, handling and transportation needs.'
+              : 'Soluciones prácticas diseñadas para cubrir sus necesidades de almacenamiento, manipulación y transporte.'
+          }}
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-number">01</div>
+
+          <div class="service-icon">📦</div>
+
+          <h3>
+            {{ currentLanguage === 'en' ? 'Containers' : 'Contenedores' }}
+          </h3>
+
+          <p>
+            {{
+              currentLanguage === 'en'
+                ? 'Solutions for storage, transportation and logistics operations.'
+                : 'Soluciones para almacenamiento, transporte y operaciones logísticas.'
+            }}
+          </p>
+
+          <a routerLink="/information" class="service-link">
+            {{ currentLanguage === 'en' ? 'Learn More' : 'Saber Más' }}
+
+            <span>→</span>
+          </a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">02</div>
+
+          <div class="service-icon">🪵</div>
+
+          <h3>
+            {{ currentLanguage === 'en' ? 'Pallets' : 'Palets' }}
+          </h3>
+
+          <p>
+            {{
+              currentLanguage === 'en'
+                ? 'Pallet solutions designed to simplify handling, storage and transportation.'
+                : 'Soluciones con palets diseñadas para facilitar la manipulación, almacenamiento y transporte.'
+            }}
+          </p>
+
+          <a routerLink="/information" class="service-link">
+            {{ currentLanguage === 'en' ? 'Learn More' : 'Saber Más' }}
+
+            <span>→</span>
+          </a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">03</div>
+
+          <div class="service-icon">🚚</div>
+
+          <h3>
+            {{ currentLanguage === 'en' ? 'Logistics' : 'Logística' }}
+          </h3>
+
+          <p>
+            {{
+              currentLanguage === 'en'
+                ? 'Practical logistics solutions adapted to your business requirements.'
+                : 'Soluciones logísticas prácticas adaptadas a las necesidades de su empresa.'
+            }}
+          </p>
+
+          <a routerLink="/quote" class="service-link">
+            {{ currentLanguage === 'en' ? 'Request a Quote' : 'Solicitar Presupuesto' }}
+
+            <span>→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="about-preview">
+    <div class="container about-grid">
+      <div class="about-image">
+        <div class="image-box">
+          <div class="image-content">
+            <span>AC</span>
+
+            <strong>LOGISTICS</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-tag">
+          {{ currentLanguage === 'en' ? 'ABOUT ACLOGISTICS' : 'SOBRE ACLOGISTICS' }}
+        </span>
+
+        <h2>
+          {{
+            currentLanguage === 'en'
+              ? 'A straightforward approach to logistics'
+              : 'Un enfoque directo para sus necesidades logísticas'
+          }}
+        </h2>
+
+        <p>
+          {{
+            currentLanguage === 'en'
+              ? 'At AcLogistics, we focus on understanding our customers and providing practical solutions adapted to their individual requirements.'
+              : 'En AcLogistics nos centramos en comprender a nuestros clientes y ofrecer soluciones prácticas adaptadas a sus necesidades.'
+          }}
+        </p>
+
+        <p>
+          {{
+            currentLanguage === 'en'
+              ? 'Our goal is to make logistics simpler by providing professional service and solutions that fit your business.'
+              : 'Nuestro objetivo es facilitar la logística ofreciendo un servicio profesional y soluciones adaptadas a cada empresa.'
+          }}
+        </p>
+
+        <a routerLink="/about-us" class="text-button">
+          {{ currentLanguage === 'en' ? 'Discover AcLogistics' : 'Descubra AcLogistics' }}
+
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          {{ currentLanguage === 'en' ? 'OUR SOLUTIONS' : 'NUESTRAS SOLUCIONES' }}
+        </span>
+
+        <h2>
+          {{
+            currentLanguage === 'en'
+              ? 'Solutions for your logistics operations'
+              : 'Soluciones para sus operaciones logísticas'
+          }}
+        </h2>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-item">
+          <div class="product-icon">📦</div>
+
+          <div>
+            <h3>
+              {{ currentLanguage === 'en' ? 'Storage Solutions' : 'Soluciones de Almacenamiento' }}
+            </h3>
+
+            <p>
+              {{
+                currentLanguage === 'en'
+                  ? 'Solutions designed to support efficient storage and organisation.'
+                  : 'Soluciones diseñadas para facilitar un almacenamiento y organización eficientes.'
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-icon">🚛</div>
+
+          <div>
+            <h3>
+              {{ currentLanguage === 'en' ? 'Transportation' : 'Transporte' }}
+            </h3>
+
+            <p>
+              {{
+                currentLanguage === 'en'
+                  ? 'Products and solutions adapted to transportation requirements.'
+                  : 'Productos y soluciones adaptados a las necesidades de transporte.'
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-icon">⚙️</div>
+
+          <div>
+            <h3>
+              {{ currentLanguage === 'en' ? 'Handling' : 'Manipulación' }}
+            </h3>
+
+            <p>
+              {{
+                currentLanguage === 'en'
+                  ? 'Practical solutions to make handling operations easier.'
+                  : 'Soluciones prácticas para facilitar las operaciones de manipulación.'
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-icon">🤝</div>
+
+          <div>
+            <h3>
+              {{ currentLanguage === 'en' ? 'Customer Support' : 'Atención al Cliente' }}
+            </h3>
+
+            <p>
+              {{
+                currentLanguage === 'en'
+                  ? 'We work with our customers to understand their requirements.'
+                  : 'Trabajamos con nuestros clientes para comprender sus necesidades.'
+              }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-content">
+      <span>
+        {{ currentLanguage === 'en' ? 'LET’S WORK TOGETHER' : 'TRABAJEMOS JUNTOS' }}
+      </span>
+
+      <h2>
+        {{
+          currentLanguage === 'en'
+            ? 'Looking for the right logistics solution?'
+            : '¿Busca la solución logística adecuada?'
+        }}
+      </h2>
+
+      <p>
+        {{
+          currentLanguage === 'en'
+            ? 'Tell us what you need and our team will help you find a suitable solution.'
+            : 'Cuéntenos qué necesita y nuestro equipo le ayudará a encontrar una solución adecuada.'
+        }}
+      </p>
+
+      <a routerLink="/quote" class="btn btn-white">
+        {{ currentLanguage === 'en' ? 'Request a Quote' : 'Solicitar Presupuesto' }}
+      </a>
+    </div>
+  </section>
+</main>

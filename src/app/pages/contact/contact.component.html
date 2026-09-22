@@ -1,0 +1,97 @@
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="tag">
+        {{ translations[currentLanguage].contact.tag }}
+      </span>
+
+      <h1>
+        {{ translations[currentLanguage].contact.title }}
+      </h1>
+
+      <p>
+        {{ translations[currentLanguage].contact.description }}
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <div class="contact-card">
+          <h3>
+            {{ translations[currentLanguage].contact.email }}
+          </h3>
+
+          <p>
+            {{ translations[currentLanguage].contact.emailValue }}
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>
+            {{ translations[currentLanguage].contact.phone }}
+          </h3>
+
+          <p>
+            {{ translations[currentLanguage].contact.phoneValue }}
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>
+            {{ translations[currentLanguage].contact.location }}
+          </h3>
+
+          <p>
+            {{ translations[currentLanguage].contact.locationValue }}
+          </p>
+        </div>
+      </div>
+
+      <form class="contact-form" (ngSubmit)="submitContact()">
+        <div class="form-group">
+          <label for="name">
+            {{ translations[currentLanguage].contact.name }}
+          </label>
+
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">
+            {{ translations[currentLanguage].contact.email }}
+          </label>
+
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">
+            {{ translations[currentLanguage].contact.subject }}
+          </label>
+
+          <input id="subject" name="subject" type="text" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">
+            {{ translations[currentLanguage].contact.message }}
+          </label>
+
+          <textarea id="message" name="message" rows="6" required> </textarea>
+        </div>
+
+        <button type="submit" class="submit-button">
+          {{ translations[currentLanguage].contact.send }}
+        </button>
+
+        @if (submitted) {
+          <div class="success-message">
+            {{ translations[currentLanguage].contact.success }}
+          </div>
+        }
+      </form>
+    </div>
+  </section>
+</main>

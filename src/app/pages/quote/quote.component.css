@@ -1,0 +1,121 @@
+.page-hero {
+  padding: 90px 20px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.container {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.page-hero h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.page-hero p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.quote-section {
+  padding: 80px 20px;
+}
+
+.quote-form {
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  padding: 14px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #1d4ed8;
+}
+
+.success-message {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 6px;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 70px 20px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .quote-form {
+    padding: 25px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

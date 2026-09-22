@@ -1,0 +1,69 @@
+<header class="header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a routerLink="/" class="logo" (click)="onCloseMenu()">
+      <img src="/images/logo.jpg" alt="AcLogistics logo" />
+
+      <span>AcLogistics</span>
+    </a>
+
+    <!-- Mobile menu button -->
+    <button
+      class="menu-button"
+      type="button"
+      (click)="onToggleMenu()"
+      aria-label="Open navigation menu"
+    >
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" [class.open]="menuOpen()">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="onCloseMenu()"
+      >
+        {{ currenLanguage === 'en' ? 'Home' : 'Inicio' }}
+      </a>
+
+      <a routerLink="/about-us" routerLinkActive="active" (click)="onCloseMenu()">
+        {{ currenLanguage === 'en' ? 'About Us' : 'Sobre Nosotros' }}
+      </a>
+
+      <a routerLink="/information" routerLinkActive="active" (click)="onCloseMenu()">
+        {{ currenLanguage === 'en' ? 'Information' : 'Información' }}
+      </a>
+
+      <a routerLink="/quote" routerLinkActive="active" (click)="onCloseMenu()">
+        {{ currenLanguage === 'en' ? 'Request a Quote' : 'Solicitar Presupuesto' }}
+      </a>
+
+      <a routerLink="/contact" routerLinkActive="active" (click)="onCloseMenu()">
+        {{ currenLanguage === 'en' ? 'Contact' : 'Contacto' }}
+      </a>
+
+      <!-- Language selector -->
+      <div class="language-selector">
+        <button
+          type="button"
+          [class.active]="currenLanguage === 'en'"
+          (click)="onChangeLanguage('en')"
+        >
+          EN
+        </button>
+
+        <span>|</span>
+
+        <button
+          type="button"
+          [class.active]="currenLanguage === 'es'"
+          (click)="onChangeLanguage('es')"
+        >
+          ES
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
