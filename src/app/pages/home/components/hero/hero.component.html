@@ -1,0 +1,85 @@
+<section class="hero">
+  <div class="hero-background"></div>
+
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+
+  <div class="hero-route hero-route-1"></div>
+  <div class="hero-route hero-route-2"></div>
+  <div class="hero-route hero-route-3"></div>
+
+  <div class="container hero-content">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+
+        <span>
+          {{ translations[currentLanguage].home.tag }}
+        </span>
+      </div>
+
+      <h1>
+        {{ translations[currentLanguage].home.title }}
+      </h1>
+
+      <p>
+        {{ translations[currentLanguage].home.description }}
+      </p>
+
+      <div class="hero-buttons">
+        <a routerLink="/quote" class="btn btn-primary">
+          <span>
+            {{ currentLanguage === 'en' ? 'Request a Quote' : 'Solicitar Presupuesto' }}
+          </span>
+
+          <span class="btn-arrow">→</span>
+        </a>
+
+        <a routerLink="/information" class="btn btn-outline">
+          {{ currentLanguage === 'en' ? 'Explore Our Solutions' : 'Descubra Nuestras Soluciones' }}
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-orbit hero-orbit-1"></div>
+      <div class="hero-orbit hero-orbit-2"></div>
+
+      <div class="hero-logo-card">
+        <div class="logo-ring"></div>
+
+        <img src="/images/logo.jpg" alt="AcLogistics" />
+      </div>
+
+      <div class="hero-floating-card">
+        <span class="floating-number">01</span>
+
+        <div>
+          <strong>
+            {{ currentLanguage === 'en' ? 'Moving forward' : 'Siempre avanzando' }}
+          </strong>
+
+          <small>
+            {{ currentLanguage === 'en' ? 'Logistics solutions' : 'Soluciones logísticas' }}
+          </small>
+        </div>
+      </div>
+
+      <div class="hero-status">
+        <span class="status-dot"></span>
+
+        <span>
+          {{ currentLanguage === 'en' ? 'Logistics solutions' : 'Soluciones logísticas' }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span class="scroll-line"></span>
+
+    <span>
+      {{ currentLanguage === 'en' ? 'Scroll to explore' : 'Desliza para explorar' }}
+    </span>
+  </div>
+</section>

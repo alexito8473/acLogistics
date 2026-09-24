@@ -1,0 +1,117 @@
+<section class="about-preview">
+  <div class="about-bg-circle about-bg-circle-1"></div>
+  <div class="about-bg-circle about-bg-circle-2"></div>
+
+  <div class="container about-grid">
+    <div class="about-visual">
+      <div class="about-image">
+        <div class="image-grid"></div>
+        <div class="image-glow"></div>
+
+        <div class="image-ring image-ring-1"></div>
+        <div class="image-ring image-ring-2"></div>
+
+        <img src="/images/logo.jpg" alt="AcLogistics" />
+
+        <div class="image-label">
+          <span></span>
+          ACLOGISTICS
+        </div>
+      </div>
+
+      <div class="about-badge">
+        <div class="badge-icon">
+          <span>AC</span>
+        </div>
+
+        <div>
+          <strong>LOGISTICS</strong>
+
+          <small>
+            {{ currentLanguage === 'en' ? 'Moving solutions forward' : 'Impulsando soluciones' }}
+          </small>
+        </div>
+
+        <div class="badge-arrow">↗</div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="section-eyebrow">
+        <span></span>
+
+        {{ currentLanguage === 'en' ? 'ABOUT ACLOGISTICS' : 'SOBRE ACLOGISTICS' }}
+      </div>
+
+      <h2>
+        {{
+          currentLanguage === 'en'
+            ? 'A straightforward approach to logistics'
+            : 'Un enfoque directo para sus necesidades logísticas'
+        }}
+      </h2>
+
+      <div class="about-divider"></div>
+
+      <p>
+        {{
+          currentLanguage === 'en'
+            ? 'At AcLogistics, we focus on understanding our customers and providing practical solutions adapted to their individual requirements.'
+            : 'En AcLogistics nos centramos en comprender a nuestros clientes y ofrecer soluciones prácticas adaptadas a sus necesidades.'
+        }}
+      </p>
+
+      <p>
+        {{
+          currentLanguage === 'en'
+            ? 'Our goal is to make logistics simpler by providing professional service and solutions that fit your business.'
+            : 'Nuestro objetivo es facilitar la logística ofreciendo un servicio profesional y soluciones adaptadas a cada empresa.'
+        }}
+      </p>
+
+      <div class="about-features">
+        <div class="about-feature">
+          <span class="feature-number">01</span>
+
+          <div>
+            <strong>
+              {{ currentLanguage === 'en' ? 'Practical approach' : 'Enfoque práctico' }}
+            </strong>
+
+            <small>
+              {{
+                currentLanguage === 'en'
+                  ? 'Solutions focused on your needs'
+                  : 'Soluciones centradas en sus necesidades'
+              }}
+            </small>
+          </div>
+        </div>
+
+        <div class="about-feature">
+          <span class="feature-number">02</span>
+
+          <div>
+            <strong>
+              {{ currentLanguage === 'en' ? 'Professional service' : 'Servicio profesional' }}
+            </strong>
+
+            <small>
+              {{
+                currentLanguage === 'en' ? 'Clear and reliable support' : 'Atención clara y fiable'
+              }}
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <a routerLink="/about-us" class="text-button">
+        <span>
+          {{ currentLanguage === 'en' ? 'Discover AcLogistics' : 'Descubra AcLogistics' }}
+        </span>
+
+        <span class="button-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>

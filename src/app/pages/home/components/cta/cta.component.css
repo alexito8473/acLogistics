@@ -1,0 +1,649 @@
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.cta {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 130px 0;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(circle at 75% 20%, rgba(22, 141, 226, 0.35), transparent 30%),
+    radial-gradient(circle at 20% 85%, rgba(6, 59, 143, 0.45), transparent 35%),
+    linear-gradient(120deg, #021b42 0%, #032b69 42%, #0752a1 72%, #087bc8 100%);
+}
+
+.cta::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+
+  background-size: 55px 55px;
+
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 90%);
+
+  pointer-events: none;
+
+  animation: ctaGridMove 18s linear infinite;
+}
+
+.cta::after {
+  content: '';
+
+  position: absolute;
+
+  width: 800px;
+  height: 800px;
+
+  right: -450px;
+  top: -450px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  animation: ctaCircleFloat 12s ease-in-out infinite;
+}
+
+.cta-content {
+  position: relative;
+
+  z-index: 5;
+
+  text-align: center;
+
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  animation: ctaContentReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
+.section-eyebrow-light {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+
+  color: #78c5f5;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.section-eyebrow-light span {
+  width: 28px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: currentColor;
+
+  animation: ctaLineReveal 0.8s ease-out 0.6s both;
+}
+
+.cta-number {
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.16);
+
+  font-size: 0.7rem;
+  font-weight: 900;
+
+  letter-spacing: 4px;
+}
+
+.cta h2 {
+  max-width: 820px;
+
+  margin: 0 auto 22px;
+
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  text-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.cta p {
+  max-width: 650px;
+
+  margin: 0 auto 38px;
+
+  color: #c8def2;
+
+  line-height: 1.8;
+
+  font-size: 0.98rem;
+}
+
+.btn-white {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  min-width: 190px;
+
+  padding: 15px 22px;
+
+  overflow: hidden;
+
+  color: #063b8f;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 0.82rem;
+
+  font-weight: 800;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.btn-white::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    100deg,
+    transparent 20%,
+    rgba(22, 141, 226, 0.12) 50%,
+    transparent 80%
+  );
+
+  transform: translateX(-120%);
+
+  transition: transform 0.6s ease;
+}
+
+.btn-white:hover {
+  transform: translateY(-5px);
+
+  background: #f8fcff;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.btn-white:hover::before {
+  transform: translateX(120%);
+}
+
+.btn-white .btn-arrow {
+  position: relative;
+
+  z-index: 2;
+
+  color: #168de2;
+
+  font-size: 1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.btn-white:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+.cta-route {
+  position: absolute;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+}
+
+.cta-route-1 {
+  right: -140px;
+  top: 42%;
+
+  width: 950px;
+  height: 270px;
+
+  transform: rotate(-12deg);
+
+  animation: routeFloat 7s ease-in-out infinite;
+}
+
+.cta-route-2 {
+  left: -250px;
+  bottom: 12%;
+
+  width: 750px;
+  height: 220px;
+
+  border-top-color: rgba(120, 197, 245, 0.1);
+
+  transform: rotate(13deg);
+
+  animation: routeFloatReverse 9s ease-in-out infinite;
+}
+
+.cta-route-1::after,
+.cta-route-2::after {
+  content: '';
+
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  top: -5px;
+
+  border-radius: 50%;
+
+  background: #78c5f5;
+
+  box-shadow:
+    0 0 0 6px rgba(120, 197, 245, 0.08),
+    0 0 20px rgba(120, 197, 245, 0.6);
+
+  animation: routeDot 4s linear infinite;
+}
+
+.cta-route-1::after {
+  left: 15%;
+
+  animation-delay: 0.5s;
+}
+
+.cta-route-2::after {
+  left: 70%;
+
+  animation-delay: 2s;
+}
+
+.cta-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(5px);
+}
+
+.cta-glow-1 {
+  width: 400px;
+  height: 400px;
+
+  left: -200px;
+  top: -200px;
+
+  background: radial-gradient(circle, rgba(22, 141, 226, 0.2), transparent 70%);
+
+  animation: glowFloat 8s ease-in-out infinite;
+}
+
+.cta-glow-2 {
+  width: 500px;
+  height: 500px;
+
+  right: -250px;
+  bottom: -300px;
+
+  background: radial-gradient(circle, rgba(120, 197, 245, 0.15), transparent 70%);
+
+  animation: glowFloat 10s ease-in-out infinite reverse;
+}
+
+.cta-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.cta-orbit-1 {
+  width: 500px;
+  height: 500px;
+
+  left: -350px;
+  top: -180px;
+
+  animation: orbitRotate 20s linear infinite;
+}
+
+.cta-orbit-2 {
+  width: 650px;
+  height: 650px;
+
+  right: -500px;
+  bottom: -450px;
+
+  border-style: dashed;
+
+  animation: orbitRotate 28s linear infinite reverse;
+}
+
+.cta-dots {
+  position: absolute;
+
+  right: 10%;
+  top: 25%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 5px);
+
+  gap: 8px;
+
+  opacity: 0.35;
+}
+
+.cta-dots span {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  animation: dotPulse 2.5s ease-in-out infinite;
+}
+
+.cta-dots span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.cta-dots span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.cta-dots span:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.cta-bottom-line {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  width: min(420px, 80%);
+
+  margin: 50px auto 0;
+
+  opacity: 0.5;
+}
+
+.cta-bottom-line span {
+  flex: 1;
+
+  height: 1px;
+
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25));
+}
+
+.cta-bottom-line span:last-child {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25), transparent);
+}
+
+.cta-bottom-line small {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.55rem;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+@keyframes ctaContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ctaLineReveal {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 28px;
+    opacity: 1;
+  }
+}
+
+@keyframes ctaGridMove {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 55px 55px;
+  }
+}
+
+@keyframes ctaCircleFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-25px, 20px);
+  }
+}
+
+@keyframes routeFloat {
+  0%,
+  100% {
+    transform: rotate(-12deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-12deg) translateY(-15px);
+  }
+}
+
+@keyframes routeFloatReverse {
+  0%,
+  100% {
+    transform: rotate(13deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(13deg) translateY(12px);
+  }
+}
+
+@keyframes routeDot {
+  0% {
+    left: 5%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 95%;
+    opacity: 0;
+  }
+}
+
+@keyframes glowFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(30px, -20px) scale(1.1);
+  }
+}
+
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dotPulse {
+  0%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .cta {
+    padding: 90px 0;
+  }
+
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  .cta h2 {
+    font-size: 2.4rem;
+    letter-spacing: -1px;
+  }
+
+  .cta p {
+    font-size: 0.9rem;
+  }
+
+  .cta-route-1 {
+    width: 650px;
+    right: -300px;
+  }
+
+  .cta-route-2 {
+    width: 550px;
+    left: -300px;
+  }
+
+  .cta-dots {
+    right: 7%;
+    top: 18%;
+  }
+
+  .cta-bottom-line {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: calc(100% - 20px);
+  }
+
+  .cta {
+    padding: 75px 0;
+  }
+
+  .cta h2 {
+    font-size: 2.05rem;
+  }
+
+  .cta-number {
+    margin-bottom: 8px;
+  }
+
+  .section-eyebrow-light {
+    font-size: 0.65rem;
+  }
+
+  .section-eyebrow-light span {
+    width: 18px;
+  }
+
+  .btn-white {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .cta-orbit-1 {
+    width: 350px;
+    height: 350px;
+    left: -250px;
+  }
+
+  .cta-orbit-2 {
+    width: 400px;
+    height: 400px;
+    right: -300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

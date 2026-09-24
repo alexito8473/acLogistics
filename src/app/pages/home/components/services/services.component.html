@@ -1,0 +1,97 @@
+<section class="services">
+  <div class="services-background"></div>
+
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">
+        <span></span>
+        {{ translations[currentLanguage].home.whatWeDo }}
+      </div>
+
+      <h2>
+        {{ translations[currentLanguage].home.servicesTitle }}
+      </h2>
+
+      <p>
+        {{
+          currentLanguage === 'en'
+            ? 'Practical solutions designed to support your storage, handling and transportation needs.'
+            : 'Soluciones prácticas diseñadas para cubrir sus necesidades de almacenamiento, manipulación y transporte.'
+        }}
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-wrapper">
+        <div class="service-glow"></div>
+
+        <app-serviceCard
+          number="01"
+          [title]="currentLanguage === 'en' ? 'Containers' : 'Contenedores'"
+          [description]="
+            currentLanguage === 'en'
+              ? 'Solutions for storage, transportation and logistics operations.'
+              : 'Soluciones para almacenamiento, transporte y operaciones logísticas.'
+          "
+          link="/information"
+          [linkText]="currentLanguage === 'en' ? 'Learn More' : 'Saber Más'"
+          borderColor="rgba(15, 23, 42, 0.12)"
+          numberBackgroundColor="#063b8f"
+          numberColor="white"
+          borderHoverColor="rgba(22, 141, 226, 0.4)"
+          decoration-color="#032b69"
+          shadowColor="rgba(15, 23, 42, 0.08)"
+          shadowHoverColor="rgba(22, 141, 226, 0.18)"
+        />
+      </div>
+
+      <div class="service-wrapper">
+        <div class="service-glow"></div>
+
+        <app-serviceCard
+          number="02"
+          [title]="currentLanguage === 'en' ? 'Pallets' : 'Palets'"
+          [description]="
+            currentLanguage === 'en'
+              ? 'Pallet solutions designed to simplify handling, storage and transportation.'
+              : 'Soluciones con palets diseñadas para facilitar la manipulación, almacenamiento y transporte.'
+          "
+          link="/information"
+          [linkText]="currentLanguage === 'en' ? 'Learn More' : 'Saber Más'"
+          borderColor="rgba(15, 23, 42, 0.12)"
+          numberBackgroundColor="#063b8f"
+          numberColor="white"
+          borderHoverColor="rgba(22, 141, 226, 0.4)"
+          shadowColor="rgba(15, 23, 42, 0.08)"
+          decoration-color="#032b69"
+          shadowHoverColor="rgba(22, 141, 226, 0.18)"
+        />
+      </div>
+
+      <div class="service-wrapper featured">
+        <div class="service-glow"></div>
+
+        <app-serviceCard
+          number="03"
+          [title]="currentLanguage === 'en' ? 'Logistics' : 'Logística'"
+          [description]="
+            currentLanguage === 'en'
+              ? 'Practical logistics solutions adapted to your business requirements.'
+              : 'Soluciones logísticas prácticas adaptadas a las necesidades de su empresa.'
+          "
+          link="/quote"
+          [linkText]="currentLanguage === 'en' ? 'Request a Quote' : 'Solicitar Presupuesto'"
+          backgroundColor="#032b69"
+          titleColor="white"
+          numberBackgroundColor="#168de2"
+          numberColor="white"
+          descriptionColor="white"
+          borderColor="rgba(255,255,255,0.08)"
+          borderHoverColor="rgba(22,141,226,0.7)"
+          shadowColor="rgba(3,43,105,0.2)"
+          shadowHoverColor="rgba(22,141,226,0.3)"
+        />
+      </div>
+    </div>
+  </div>
+</section>

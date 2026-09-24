@@ -6,7 +6,7 @@ export type Language = 'en' | 'es';
   providedIn: 'root',
 })
 export class LanguageService {
-  currentLanguage = signal<Language>('en');
+  currentLanguage = signal<Language>('es');
 
   setLanguage(language: Language): void {
     this.currentLanguage.set(language);

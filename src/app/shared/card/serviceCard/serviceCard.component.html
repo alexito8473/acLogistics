@@ -1,0 +1,45 @@
+<article
+  class="service-card"
+  [style.--card-color]="color()"
+  [style.--card-background]="backgroundColor()"
+  [style.--title-color]="titleColor()"
+  [style.--description-color]="descriptionColor()"
+  [style.--number-color]="numberColor()"
+  [style.--number-background]="numberBackgroundColor()"
+  [style.--number-border]="numberBorderColor()"
+  [style.--icon-background]="iconBackgroundColor()"
+  [style.--icon-color]="iconColor()"
+  [style.--icon-border]="iconBorderColor()"
+  [style.--border-color]="borderColor()"
+  [style.--border-hover-color]="borderHoverColor()"
+  [style.--decoration-color]="decorationColor()"
+  [style.--decoration-opacity]="decorationOpacity()"
+  [style.--link-color]="linkColor()"
+  [style.--link-hover-color]="linkHoverColor()"
+  [style.--shadow-color]="shadowColor()"
+  [style.--shadow-hover-color]="shadowHoverColor()"
+>
+  <div class="service-top">
+    <span class="service-number">
+      {{ number() }}
+    </span>
+  </div>
+
+  <div class="service-content">
+    <h3>
+      {{ title() }}
+    </h3>
+
+    <p>
+      {{ description() }}
+    </p>
+  </div>
+
+  <a [routerLink]="link()" class="service-link">
+    <span>
+      {{ linkText() }}
+    </span>
+
+    <span class="link-arrow"> ↗ </span>
+  </a>
+</article>

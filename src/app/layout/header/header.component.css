@@ -1,24 +1,18 @@
 .header {
   width: 100%;
-
+  box-sizing: border-box;
+  padding: 0px 0.5vw;
   background: #ffffff;
-
   border-bottom: 1px solid #e5e7eb;
-
   position: sticky;
   top: 0;
-
   z-index: 1000;
 }
 
 .header-container {
-  max-width: 1200px;
-
   min-height: 75px;
 
   margin: 0 auto;
-
-  padding: 0 1.5rem;
 
   display: flex;
 
@@ -192,6 +186,7 @@
 }
 
 .language-selector span {
-  color: #d1d5db;
-  font-size: 0.8rem;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
